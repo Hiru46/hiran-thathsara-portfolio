@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: hiran-thathsara-portfolio
+    runtime: node
+    plan: free
+    buildCommand: npm install --prefix client && npm install --prefix server && npm run build
+    startCommand: npm --prefix server start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
