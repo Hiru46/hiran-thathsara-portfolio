@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import {
-  ArrowDown, ArrowUpRight, BriefcaseBusiness, Car, Code2, Globe2,
-  GraduationCap, Heart, Mail, MapPin, Menu, Music2, School, Smartphone,
-  Sparkles, Utensils, Wallet, X, BrainCircuit
+  ArrowDown, ArrowUpRight, BriefcaseBusiness, Code2,
+  GraduationCap, Mail, MapPin, Menu, Sparkles, X
 } from 'lucide-react'
 import './App.css'
 
@@ -34,17 +33,17 @@ const fallback = {
     Practices: ['Responsive Design', 'Authentication', 'Android', 'API Integration', 'Troubleshooting']
   },
   projects: [
-    { title: 'AuraLearn', category: 'Research', accent: '#a78bfa', icon: 'brain', description: 'AI-enabled adaptive study reminder system using spaced repetition, affective readiness signals and contextual reinforcement learning.', tech: ['Python', 'FastAPI', 'Spring Boot', 'React', 'MongoDB', 'Docker'], github: 'https://github.com/Hiru46', featured: true },
-    { title: 'HarmoniQ', category: 'Full Stack', accent: '#38bdf8', icon: 'music', description: 'Microservices music platform for song discovery, playlist management and personalised recommendations.', tech: ['React', 'Vite', 'Node.js', 'MongoDB', 'Clerk', 'Kubernetes'], github: 'https://github.com/Hiru46', featured: true },
-    { title: 'Wash & Go', category: 'Full Stack', accent: '#34d399', icon: 'car', description: 'Vehicle service centre operations platform with service packages, CRUD workflows and administration.', tech: ['React', 'Vite', 'Node.js', 'Express', 'MongoDB'], github: 'https://github.com/Hiru46/Wash_and_Go', featured: true },
-    { title: 'Leeds Kindergarten', category: 'Full Stack', accent: '#f59e0b', icon: 'school', description: 'Management platform for student information, parents and events backed by a relational database.', tech: ['React', 'Vite', 'Node.js', 'Express', 'MySQL'], github: 'https://github.com/Hiru46/Leeds_Kindergartens', featured: true },
-    { title: 'Wander World', category: 'Frontend', accent: '#818cf8', icon: 'globe', description: 'Country exploration application integrating REST APIs and deployed for the web.', tech: ['MERN', 'TypeScript', 'REST APIs', 'Firebase'], github: 'https://github.com/Hiru46/Wander_World', featured: true },
-    { title: 'BiteBlaze', category: 'Microservices', accent: '#fb7185', icon: 'utensils', description: 'Distributed systems meal delivery application built with a modular microservices architecture.', tech: ['MERN', 'Vite', 'Microservices', 'Tailwind'], github: 'https://github.com/Hiru46/BiteBlaze', featured: true },
-    { title: 'Finance Tracker', category: 'Backend', accent: '#22d3ee', icon: 'wallet', description: 'Database-driven backend services for managing customer financial tasks.', tech: ['MongoDB', 'Express', 'Node.js'], github: 'https://github.com/Hiru46/Finance_Tracker', featured: false },
-    { title: 'CrickFound', category: 'Mobile', accent: '#4ade80', icon: 'smartphone', description: 'Android academic application developed using Kotlin.', tech: ['Kotlin', 'Android'], github: 'https://github.com/Hiru46/CrickFound', featured: false },
-    { title: 'Wedding Planning', category: 'Web', accent: '#f472b6', icon: 'heart', description: 'Web application for coordinating wedding event planning activities.', tech: ['HTML', 'CSS', 'JavaScript', 'PHP'], github: 'https://github.com/Hiru46', featured: false },
-    { title: 'Marry Meal', category: 'Web', accent: '#fb923c', icon: 'meal', description: 'Non-profit meal delivery management application for elders.', tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'phpMyAdmin'], github: 'https://github.com/Hiru46', featured: false },
-    { title: 'BattleShip', category: 'Games', accent: '#60a5fa', icon: 'game', description: 'Two-player Battleship game with core gameplay logic.', tech: ['Java'], github: 'https://github.com/Hiru46/Battleship', featured: false }
+    { title: 'AuraLearn', category: 'Research', accent: '#a78bfa', icon: 'brain', image: '/projects/auralearn.jpg', description: 'AI-enabled adaptive study reminder system using spaced repetition, affective readiness signals and contextual reinforcement learning.', tech: ['Python', 'FastAPI', 'Spring Boot', 'React', 'MongoDB', 'Docker'], github: 'https://github.com/Hiru46/research_website', featured: true },
+    { title: 'HarmoniQ', category: 'Full Stack', accent: '#38bdf8', icon: 'music', image: '/projects/harmoniq.svg', description: 'Microservices music platform for song discovery, playlist management and personalised recommendations.', tech: ['React', 'Vite', 'Node.js', 'MongoDB', 'Clerk', 'Kubernetes'], github: null, featured: true },
+    { title: 'Wash & Go', category: 'Full Stack', accent: '#34d399', icon: 'car', image: '/projects/wash-and-go.png', description: 'Vehicle service centre operations platform with service packages, CRUD workflows and administration.', tech: ['React', 'Vite', 'Node.js', 'Express', 'MongoDB'], github: 'https://github.com/Hiru46/Wash_and_Go', featured: true },
+    { title: 'Leeds Kindergarten', category: 'Full Stack', accent: '#f59e0b', icon: 'school', image: '/projects/leeds-kindergarten.png', description: 'Management platform for student information, parents and events backed by a relational database.', tech: ['React', 'Vite', 'Node.js', 'Express', 'MySQL'], github: 'https://github.com/Hiru46/Leeds_Kindergartens', featured: true },
+    { title: 'Wander World', category: 'Frontend', accent: '#818cf8', icon: 'globe', image: '/projects/wander-world.jpg', description: 'Country exploration application integrating REST APIs and deployed for the web.', tech: ['MERN', 'TypeScript', 'REST APIs', 'Firebase'], github: 'https://github.com/Hiru46/Wander_World', featured: true },
+    { title: 'BiteBlaze', category: 'Microservices', accent: '#fb7185', icon: 'utensils', image: '/projects/biteblaze.svg', description: 'Distributed systems meal delivery application built with a modular microservices architecture.', tech: ['MERN', 'Vite', 'Microservices', 'Tailwind'], github: 'https://github.com/Hiru46/BiteBlaze', featured: true },
+    { title: 'Finance Tracker', category: 'Backend', accent: '#22d3ee', icon: 'wallet', image: '/projects/finance-tracker.svg', description: 'Database-driven backend services for managing customer financial tasks.', tech: ['MongoDB', 'Express', 'Node.js'], github: 'https://github.com/Hiru46/Finance_Tracker', featured: false },
+    { title: 'CrickFound', category: 'Mobile', accent: '#4ade80', icon: 'smartphone', image: '/projects/crickfound.png', description: 'Android academic application developed using Kotlin.', tech: ['Kotlin', 'Android'], github: 'https://github.com/Hiru46/CrickFound', featured: false },
+    { title: 'Wedding Planning', category: 'Web', accent: '#f472b6', icon: 'heart', image: '/projects/wedding-planning.svg', description: 'Web application for coordinating wedding event planning activities.', tech: ['HTML', 'CSS', 'JavaScript', 'PHP'], github: null, featured: false },
+    { title: 'Marry Meal', category: 'Web', accent: '#fb923c', icon: 'meal', image: '/projects/marry-meal.svg', description: 'Non-profit meal delivery management application for elders.', tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'phpMyAdmin'], github: 'https://github.com/Hiru46/MerryMeal', featured: false },
+    { title: 'BattleShip', category: 'Games', accent: '#60a5fa', icon: 'game', image: '/projects/battleship.svg', description: 'Two-player Battleship game with core gameplay logic.', tech: ['Java'], github: 'https://github.com/Hiru46/Battleship', featured: false }
   ],
   research: {
     title: 'AuraLearn Adaptive Study Reminder',
@@ -59,8 +58,6 @@ const fallback = {
     note: 'Reported research study results from a 30-day trial with 32 students, not commercial production metrics.'
   }
 }
-
-const iconMap = { brain: BrainCircuit, music: Music2, car: Car, school: School, globe: Globe2, utensils: Utensils, wallet: Wallet, smartphone: Smartphone, heart: Heart, meal: Utensils, game: Code2 }
 
 function Reveal({ children, delay = 0, className = '' }) {
   const reduceMotion = useReducedMotion()
@@ -132,7 +129,7 @@ function App() {
         <section className="section work" id="work">
           <Reveal><div className="section-kicker"><span>04</span> Selected work</div><h2 className="section-title">Projects with purpose.</h2></Reveal>
           <div className="filters" role="group" aria-label="Project filters">{categories.slice(0, 7).map(category => <button className={filter === category ? 'active' : ''} key={category} onClick={() => setFilter(category)}>{category}</button>)}</div>
-          <motion.div layout className="projects-grid">{visibleProjects.map((project, i) => { const Icon = iconMap[project.icon] || Code2; return <motion.article layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} key={project.title} className="project-card"><div className="project-visual" style={{ '--accent': project.accent }}><div className="project-glow" /><Icon size={52} strokeWidth={1.25} /><div className="window-lines"><span /><span /><span /></div><a href={project.github} target="_blank" rel="noreferrer" aria-label={`View ${project.title} on GitHub`}><ArrowUpRight /></a></div><div className="project-body"><span className="project-index">{String(i + 1).padStart(2, '0')} / {project.category}</span><h3>{project.title}</h3><p>{project.description}</p><div className="tech-list">{project.tech.slice(0, 5).map(t => <span key={t}>{t}</span>)}</div></div></motion.article> })}</motion.div>
+          <motion.div layout className="projects-grid">{visibleProjects.map((project, i) => <motion.article layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} key={project.title} className="project-card"><div className="project-visual" style={{ '--accent': project.accent }}><img src={project.image} alt={`${project.title} project preview`} loading="lazy" />{project.github && <a href={project.github} target="_blank" rel="noreferrer" aria-label={`View ${project.title} repository on GitHub`}><ArrowUpRight /></a>}</div><div className="project-body"><span className="project-index">{String(i + 1).padStart(2, '0')} / {project.category}</span><h3>{project.title}</h3><p>{project.description}</p><div className="tech-list">{project.tech.slice(0, 5).map(t => <span key={t}>{t}</span>)}</div></div></motion.article>)}</motion.div>
         </section>
 
         <section className="section research" id="research">
