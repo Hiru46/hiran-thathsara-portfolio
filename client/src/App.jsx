@@ -14,7 +14,7 @@ const fallback = {
   email: 'hiranthathsara9@gmail.com',
   github: 'https://github.com/Hiru46',
   linkedin: 'https://linkedin.com/in/hiran-thathsara-64512a220',
-  summary: 'Full-stack developer with more than a year of professional experience building, integrating and maintaining web applications across Java, JavaScript, React.js and Node.js.',
+  summary: 'Software engineer and full-stack developer with more than a year of professional experience building, integrating and maintaining web applications across Java, JavaScript, React.js and Node.js. All academic requirements for the BSc (Hons) in Software Engineering are complete, with formal graduation scheduled for March 2027.',
   experience: [
     { role: 'Associate Software Engineer', company: 'CODUZA (Pvt) Ltd', period: 'Aug 2025 - Nov 2026', type: 'Project-Based', points: ['Built and maintained responsive user-facing applications', 'Integrated REST APIs and managed frontend/backend data flow', 'Implemented feature improvements and diagnosed live application defects'] },
     { role: 'Data Entry Operator', company: 'Pacific Beverage Lanka', period: 'Jul 2026 - Oct 2026', type: 'Part-time', points: ['Performed accurate data entry with strong attention to detail', 'Completed assigned work within a professional environment'] },
@@ -95,7 +95,7 @@ function App() {
             <Reveal className="hero-copy">
               <div className="availability"><span /> Available for opportunities</div>
               <p className="eyebrow">Hello, I'm</p>
-              <h1>Hiran<br /><strong>Thathsara.</strong></h1>
+              <h1><span className="given-name">Hiran</span><strong className="surname">Thathsara<span>.</span></strong></h1>
               <div className="role-line"><span>{data.role}</span><i />{data.secondaryRole}</div>
               <p className="hero-summary">{data.summary}</p>
               <div className="hero-actions"><a className="button primary" href="#work">Explore my work <ArrowDown size={17} /></a><a className="button ghost" href={data.github} target="_blank" rel="noreferrer"><Code2 size={18} /> GitHub</a></div>

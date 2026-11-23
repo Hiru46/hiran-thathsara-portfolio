@@ -7,7 +7,7 @@ export const portfolio = {
   phone: '+94 719 243 296',
   github: 'https://github.com/Hiru46',
   linkedin: 'https://linkedin.com/in/hiran-thathsara-64512a220',
-  summary: 'Full-stack developer and Software Engineering undergraduate with more than a year of professional experience building, integrating and maintaining web applications across Java, JavaScript, React.js and Node.js.',
+  summary: 'Software engineer and full-stack developer with more than a year of professional experience building, integrating and maintaining web applications across Java, JavaScript, React.js and Node.js. All academic requirements for the BSc (Hons) in Software Engineering are complete, with formal graduation scheduled for March 2027.',
   experience: [
     { role: 'Associate Software Engineer', company: 'CODUZA (Pvt) Ltd', period: 'Aug 2025 - Nov 2026', type: 'Project-Based', points: ['Built and maintained responsive user-facing applications', 'Integrated REST APIs and managed frontend/backend data flow', 'Implemented feature improvements and diagnosed live application defects'] },
     { role: 'Data Entry Operator', company: 'Pacific Beverage Lanka', period: 'Jul 2026 - Oct 2026', type: 'Part-time', points: ['Performed accurate data entry with strong attention to detail', 'Completed assigned work within a professional environment'] },
